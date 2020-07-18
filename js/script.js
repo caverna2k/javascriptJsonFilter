@@ -97,15 +97,15 @@ async function populateStats(users) {
   var item3 = document.createElement('li');
   var item4 = document.createElement('li');
   var statsMasc = document.createElement('span');
-  statsMasc.innerHTML = `Sexo Masculino: ${masc} `;
+  statsMasc.innerHTML = `Sexo Masculino: <b>${masc}</b> `;
   var statsFem = document.createElement('span');
-  statsFem.innerHTML = `Sexo Feminino: ${fem} `;
+  statsFem.innerHTML = `Sexo Feminino: <b>${fem}</b> `;
   var statsSumAge = document.createElement('span');
-  statsSumAge.innerHTML = `Soma das idades: ${sumAge} anos`;
+  statsSumAge.innerHTML = `Soma das idades: <b>${sumAge}</b> anos`;
   var statsAvgAge = document.createElement('span');
-  statsAvgAge.innerHTML = `Média das idades: ${avgAge
+  statsAvgAge.innerHTML = `Média das idades: <b>${avgAge
     .toFixed(2)
-    .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')} anos`;
+    .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}</b> anos`;
 
   item1.appendChild(statsMasc);
   item2.appendChild(statsFem);
