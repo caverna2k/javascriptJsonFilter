@@ -1,0 +1,54 @@
+input {
+  width: 450px !important;
+}
+
+#divBusca {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+#result {
+  display: flex !important;
+  flex-direction: row !important;
+  padding: 10px;
+  text-align: center;
+}
+
+#user,
+#data {
+  width: 50%;
+  border: 1px solid lightgray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
+li {
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  flex-flow: row;
+}
+
+#divContainer {
+}
+span {
+  padding: 20px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+img {
+  text-align: left;
+  vertical-align: middle;
+}
+
+li > div {
+  padding: 5px;
+}
