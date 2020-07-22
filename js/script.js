@@ -31,7 +31,7 @@ async function filtrar(event) {
 
     filteredPersons = await allPersons
       .filter((res) => {
-        return res.name.includes(input.value);
+        return res.name.toLowerCase().includes(input.value.toLowerCase());
       })
       .sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0));
 
@@ -70,20 +70,20 @@ async function populateUsers(users) {
 async function populateStats(users) {
   dataDiv.innerHTML = '';
 
-  var masc = users.reduce((accumulator, currentItem) => {
+  var masc = users.reduce((a, currentItem) => {
     if (currentItem.gender == 'male') {
-      accumulator++;
+      a++;
     }
-    return accumulator;
+    return a;
   }, 0);
-  var fem = users.reduce((accumulator, currentItem) => {
+  var fem = users.reduce((b, currentItem) => {
     if (currentItem.gender == 'female') {
-      accumulator++;
+      b++;
     }
-    return accumulator;
+    return b;
   }, 0);
-  var sumAge = users.reduce((accumulator, currentItem) => {
-    return accumulator + currentItem.age;
+  var sumAge = users.reduce((c, currentItem) => {
+    return (c += currentItem.age);
   }, 0);
   var avgAge = sumAge / users.length;
 
